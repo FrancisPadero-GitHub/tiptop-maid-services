@@ -35,12 +35,12 @@ export default function AboutPage() {
                 expectations with every service we provide.
               </p>
 
-              <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4">
+              <div className="flex flex-col flex-wrap gap-4 pt-4 sm:flex-row">
                 <Link href="/book" className="w-full sm:w-auto">
                   <Button
                     variant="primary"
                     size="lg"
-                    className="w-full flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                    className="flex w-full items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                   >
                     Get A Free Quote
                     <span className="material-symbols-outlined text-sm font-bold">
@@ -49,7 +49,7 @@ export default function AboutPage() {
                   </Button>
                 </Link>
                 <a
-                  className="w-full sm:w-auto border-primary-container text-primary hover:bg-primary flex items-center justify-center gap-2 rounded-md border-2 px-8 py-4 font-semibold tracking-wide text-sm transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                  className="flex w-full items-center justify-center gap-2 rounded-md border-2 border-primary-container px-8 py-4 text-sm font-semibold tracking-wide text-primary transition-all duration-200 hover:scale-[1.02] hover:bg-primary active:scale-[0.98] sm:w-auto"
                   href="tel:+18133362927"
                 >
                   <span className="material-symbols-outlined text-base">
@@ -72,7 +72,7 @@ export default function AboutPage() {
               />
 
               {/* Floating Badge */}
-              <div className="absolute right-4 -bottom-6 sm:-right-6 z-20 flex animate-float items-center gap-3 rounded-xl border border-outline-variant/50 bg-surface/95 p-4 shadow-level-1 backdrop-blur-md">
+              <div className="absolute right-4 -bottom-6 z-20 flex animate-float items-center gap-3 rounded-xl border border-outline-variant/50 bg-surface/95 p-4 shadow-level-1 backdrop-blur-md sm:-right-6">
                 <div className="rounded-full bg-success-teal/15 p-2 text-success-teal">
                   <span
                     className="material-symbols-outlined icon-fill"
@@ -407,7 +407,7 @@ export default function AboutPage() {
               Maid Services? Contact us today to schedule your cleaning
               appointment and discover the difference a clean space can make.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+            <div className="flex flex-col justify-center gap-4 pt-4 sm:flex-row">
               <Link href="/book" className="w-full sm:w-auto">
                 <Button
                   variant="secondary"
@@ -418,7 +418,7 @@ export default function AboutPage() {
                 </Button>
               </Link>
               <a
-                className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-md border-2 border-white/40 px-8 py-4 text-sm font-bold tracking-wide text-white transition-all hover:scale-105 hover:bg-white/10 active:scale-95"
+                className="flex w-full items-center justify-center gap-2 rounded-md border-2 border-white/40 px-8 py-4 text-sm font-bold tracking-wide text-white transition-all hover:scale-105 hover:bg-white/10 active:scale-95 sm:w-auto"
                 href="tel:+18133362927"
               >
                 <span className="material-symbols-outlined text-base">

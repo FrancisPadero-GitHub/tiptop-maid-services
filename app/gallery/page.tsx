@@ -125,14 +125,14 @@ export default function GalleryPage() {
               Join hundreds of satisfied homeowners in Tampa who trust us for
               their residential and commercial cleaning needs.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link href="/book" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto cursor-pointer rounded-md bg-white px-8 py-4 text-sm font-semibold tracking-wide text-primary shadow-sm transition-colors duration-200 select-none hover:bg-surface-ice">
+                <button className="w-full cursor-pointer rounded-md bg-white px-8 py-4 text-sm font-semibold tracking-wide text-primary shadow-sm transition-colors duration-200 select-none hover:bg-surface-ice sm:w-auto">
                   Get a Free Quote
                 </button>
               </Link>
               <Link href="/book" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto cursor-pointer rounded-md border border-outline px-8 py-4 text-sm font-semibold tracking-wide text-white transition-colors duration-200 select-none hover:bg-white/10">
+                <button className="w-full cursor-pointer rounded-md border border-outline px-8 py-4 text-sm font-semibold tracking-wide text-white transition-colors duration-200 select-none hover:bg-white/10 sm:w-auto">
                   Contact Us
                 </button>
               </Link>

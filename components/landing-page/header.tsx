@@ -115,7 +115,11 @@ export function Header() {
                 +1 813-336-2927
               </span>
             </a>
-            <Link href="/book" className="w-full" onClick={() => setIsOpen(false)}>
+            <Link
+              href="/book"
+              className="w-full"
+              onClick={() => setIsOpen(false)}
+            >
               <Button variant="primary" size="lg" className="w-full">
                 Book Now
               </Button>

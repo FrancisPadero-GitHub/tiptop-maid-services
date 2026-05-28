@@ -188,9 +188,9 @@ export default function ServicesPage() {
               products, fully insured, and reliable scheduling in Tampa, FL.
             </p>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <a
-                className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-md bg-primary-container px-8 py-4 text-sm font-semibold tracking-wide text-on-primary shadow-sm transition-colors duration-200 select-none hover:bg-secondary"
+                className="flex w-full items-center justify-center gap-2 rounded-md bg-primary-container px-8 py-4 text-sm font-semibold tracking-wide text-on-primary shadow-sm transition-colors duration-200 select-none hover:bg-secondary sm:w-auto"
                 href="tel:+18133362927"
               >
                 Call Now
