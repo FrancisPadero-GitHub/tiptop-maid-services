@@ -8,13 +8,13 @@ export function Hero() {
     <section className="relative overflow-hidden bg-surface py-10 md:py-10">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
         {/* Hero Left Content */}
-        <div className="z-10 flex animate-fade-in-up flex-col justify-center space-y-6">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-surface-ice px-4 py-1.5 text-primary transition-transform duration-200 hover:scale-102">
+        <div className="z-10 flex animate-fade-in-up flex-col justify-center space-y-2">
+          <div className="inline-flex w-fit items-center gap-2 px-4 py-1.5 text-primary transition-transform duration-200 hover:scale-102">
             <span
               className="material-symbols-outlined animate-pulse text-sparkle-blue"
               style={{ fontSize: "18px" }}
             >
-              auto_awesome
+              campaign
             </span>
             <span className="text-xs font-semibold tracking-wider uppercase">
               Serving Tampa & Surrounding Areas
@@ -44,7 +44,7 @@ export function Hero() {
             </a>
             <Link href="/book" className="w-full sm:w-auto">
               <Button
-                variant="outline"
+                variant="ghost"
                 size="lg"
                 className="w-full transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
