@@ -16,5 +16,6 @@
   // ignores unknown at rules in global.css
   "css.lint.unknownAtRules": "ignore",
   "editor.formatOnSave": true,
-  "workbench.colorTheme": "Monokai"
+  "workbench.colorTheme": "Monokai",
+  "terminal.integrated.commandsToSkipShell": ["workbench.mcp.startServer"]
 }

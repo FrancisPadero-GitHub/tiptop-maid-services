@@ -1,1 +1,122 @@
 @import "tailwindcss";
+
+@theme {
+  /* Brand Specific Colors */
+  --color-primary: #002d6b;
+  --color-primary-container: #18448c;
+  --color-secondary: #0561a4;
+  --color-secondary-container: #74b4fd;
+  --color-tertiary: #253241;
+  --color-tertiary-container: #3b4858;
+  
+  --color-surface-ice: #f4f8ff;
+  --color-surface-bright: #fbf9f8;
+  --color-sparkle-blue: #90caf9;
+  --color-success-teal: #00897b;
+  
+  --color-surface-container: #f0eded;
+  --color-surface-container-low: #f6f3f2;
+  --color-surface-container-high: #eae8e7;
+  --color-surface-container-highest: #e4e2e1;
+  --color-surface-container-lowest: #ffffff;
+  
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-on-surface: #1b1c1c;
+  --color-on-surface-variant: #434751;
+  
+  --color-outline: #747782;
+  --color-outline-variant: #c3c6d2;
+
+  /* Custom Elevation/Shadows */
+  --shadow-level-1: 0 4px 20px 0 rgba(24, 68, 140, 0.04);
+  --shadow-level-2: 0 8px 30px 0 rgba(24, 68, 140, 0.08);
+
+  /* Animations */
+  --animate-fade-in-up: fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in-down: fade-in-down 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in-left: fade-in-left 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in-right: fade-in-right 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-scale-up: scale-up 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  --animate-float: float 4s ease-in-out infinite;
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fade-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(-16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scale-up {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+}
+
+/* Base custom font configuration fallback */
+body {
+  background-color: var(--color-surface-bright);
+  color: var(--color-on-surface);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-fill {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
