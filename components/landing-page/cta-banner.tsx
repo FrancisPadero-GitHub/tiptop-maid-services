@@ -1,4 +1,5 @@
 import * as React from "react"
+import Link from "next/link"
 import { Button } from "./button"
 
 export function CtaBanner() {
@@ -17,9 +18,11 @@ export function CtaBanner() {
 
         {/* Buttons Stack */}
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto shrink-0 justify-center">
-          <button className="bg-white text-primary hover:bg-surface-ice transition-colors duration-200 font-semibold tracking-wide text-sm px-8 py-4 rounded-md shadow-sm select-none cursor-pointer">
-            Book Now Online
-          </button>
+          <Link href="/book" className="w-full sm:w-auto">
+            <button className="w-full bg-white text-primary hover:bg-surface-ice transition-colors duration-200 font-semibold tracking-wide text-sm px-8 py-4 rounded-md shadow-sm select-none cursor-pointer">
+              Book Now Online
+            </button>
+          </Link>
           
           <a
             className="border border-outline hover:bg-white/10 transition-colors duration-200 text-white font-semibold tracking-wide text-sm px-8 py-4 rounded-md flex items-center justify-center gap-2 select-none"

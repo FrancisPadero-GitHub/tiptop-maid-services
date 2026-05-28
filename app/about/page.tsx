@@ -1,4 +1,6 @@
 import * as React from "react"
+import Link from "next/link"
+import Image from "next/image"
 import { Header } from "@/components/landing-page/header"
 import { Footer } from "@/components/landing-page/footer"
 import { Button } from "@/components/landing-page/button"
@@ -28,12 +30,12 @@ export default function AboutPage() {
               </p>
               
               <div className="flex flex-wrap gap-4 pt-4">
-                <a href="/book">
+                <Link href="/book">
                   <Button variant="primary" size="lg" className="flex items-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200">
                     Get A Free Quote
                     <span className="material-symbols-outlined text-sm font-bold">arrow_forward</span>
                   </Button>
-                </a>
+                </Link>
                 <a
                   className="border-2 border-primary-container text-primary hover:bg-primary hover:text-white transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] font-semibold tracking-wide text-sm px-8 py-4 rounded-md flex items-center gap-2"
                   href="tel:+18133362927"
@@ -47,10 +49,12 @@ export default function AboutPage() {
             {/* Right Image Layout */}
             <div className="relative animate-scale-up">
               <div className="absolute inset-0 bg-gradient-to-tr from-secondary-fixed/40 to-transparent rounded-2xl transform translate-x-4 translate-y-4"></div>
-              <img
+              <Image
                 alt="Professional Maid Service cleaning kitchen counter"
                 className="relative z-10 w-full h-auto rounded-2xl shadow-level-2 border border-outline-variant/65 object-cover aspect-[4/3] select-none hover:scale-102 transition-transform duration-700"
                 src="https://lh3.googleusercontent.com/aida/ADBb0uieR1Ctjvhz5ZvUaRzlJS0gR37hDZPNxj5ccyph2zrnrfiVrK1c4ilvblrABDkWuiOzLCbP3ilniEHzkFxj6-beWSFR1IqWHz09Ma7omu2DYljH4zTxfT9TGJSVimoSBodB7tH4hnXIpMFlvl2mq3igOfsg5_AHql9CpqEwIgu1x0rRTiyT_BmeiKExwSsBGPrDJXG_CFL0SDMBJWudxzEjgBLtNfPdXks_qeuMExk2xL78nCaH--S_5eM"
+                width={800}
+                height={600}
               />
               
               {/* Floating Badge */}
@@ -216,10 +220,12 @@ export default function AboutPage() {
               {/* Service Card 1: Commercial Cleaning */}
               <div className="bg-surface-bright rounded-2xl overflow-hidden border border-outline-variant/60 shadow-level-1 hover:shadow-level-2 transition-all duration-300 flex flex-col group">
                 <div className="h-48 overflow-hidden relative">
-                  <img 
+                  <Image 
                     src="https://lh3.googleusercontent.com/aida/ADBb0uhrek0t8AME3HMdFYGlj5NQ3XCE4v56IZzfsijAQkbmlNP0b2GqcTqfJhyVsAIJQMHosS_CR4QzZzH8Dxq4FI2ovGB7cubMS7ahZfuExcifoaBtNjR6OK9KDAU5XpFeTHCwDlVGnohKk-tbUi6KT8H8O2IMGj2913Qrzo6RCSPhCsVA6X4gVLkhuUsWPJRaqG-mUNBus7NCpclt5uHO0U-tYaOtaGLhCW6oZE2Ic4_1rbe_iGp6Kk7lk84" 
                     alt="Commercial office space clean and professional" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
                 </div>
@@ -230,20 +236,22 @@ export default function AboutPage() {
                       Keep your workplace clean and professional with our commercial cleaning services designed to meet the unique needs of businesses in Tampa, FL.
                     </p>
                   </div>
-                  <a href="/book" className="inline-flex items-center text-xs font-semibold text-secondary hover:text-primary transition-colors gap-1 group/btn">
+                  <Link href="/book" className="inline-flex items-center text-xs font-semibold text-secondary hover:text-primary transition-colors gap-1 group/btn">
                     Book Service
                     <span className="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
               {/* Service Card 2: Post Construction */}
               <div className="bg-surface-bright rounded-2xl overflow-hidden border border-outline-variant/60 shadow-level-1 hover:shadow-level-2 transition-all duration-300 flex flex-col group">
                 <div className="h-48 overflow-hidden relative">
-                  <img 
+                  <Image 
                     src="https://lh3.googleusercontent.com/aida/ADBb0uiMPCN3iKSAqUCtgth2yrr0Yh51NX1q5l6AsLxgICbwTXnJgshb-wFTVGaDMpnxLEww_s7Gt-EJZanURUe7H6gDnaGcYFqzpUq6fbfIwM2HsyeG2PmrHOBS4gpDLtWhA3Jf5Xjy8PV8PILY82NynEZ7CjisyUHtAudSwSsABiylQsMv68_QcHZvc2I8pon9fzJy96gsyay8WgwlBFULbHoThwmaH8IelQaapDQl46l5Bp_ex60IAOWu3iw" 
                     alt="Pristine post-construction interior space" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
                 </div>
@@ -254,20 +262,22 @@ export default function AboutPage() {
                       Whether you’ve completed a renovation or a new construction project, our post-construction cleaning services will ensure that your space is clean and ready for occupancy.
                     </p>
                   </div>
-                  <a href="/book" className="inline-flex items-center text-xs font-semibold text-secondary hover:text-primary transition-colors gap-1 group/btn">
+                  <Link href="/book" className="inline-flex items-center text-xs font-semibold text-secondary hover:text-primary transition-colors gap-1 group/btn">
                     Book Service
                     <span className="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
               {/* Service Card 3: Airbnb Cleaning */}
               <div className="bg-surface-bright rounded-2xl overflow-hidden border border-outline-variant/60 shadow-level-1 hover:shadow-level-2 transition-all duration-300 flex flex-col group">
                 <div className="h-48 overflow-hidden relative">
-                  <img 
+                  <Image 
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTOU3vM7QkskT-mtJOXAFkhSZixR9v0tZ9vB0dQj2IKMrlrw8g9m1H-qqLDYohgmZ38gqT5zzTCGlUDF-mG7UfeFC_r6esTnky2MxkmfvJizW1yXMGd5tEtR75zKXp4hCdHZMbr9lkasN0QD0dvQ7jiyC3nKo2-Z1CPmuyIHn3524gL5mtxAKf5mqt6525a4HY6vMeZWQEe6over6GbnImRTrrvabby8clc1vCelwlgnsQu82qMZhGZqCuxuH-Zn5G3INwd_4BB0o" 
                     alt="Spacious guest room with perfectly made bed" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
                 </div>
@@ -278,10 +288,10 @@ export default function AboutPage() {
                       Impress your guests with a pristine and welcoming Airbnb property. Our Airbnb cleaning services will ensure that your rental property is spotless and ready for your next guest’s arrival.
                     </p>
                   </div>
-                  <a href="/book" className="inline-flex items-center text-xs font-semibold text-secondary hover:text-primary transition-colors gap-1 group/btn">
+                  <Link href="/book" className="inline-flex items-center text-xs font-semibold text-secondary hover:text-primary transition-colors gap-1 group/btn">
                     Book Service
                     <span className="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -303,11 +313,11 @@ export default function AboutPage() {
               Ready to experience the exceptional cleaning services of Tip Top Maid Services? Contact us today to schedule your cleaning appointment and discover the difference a clean space can make.
             </p>
             <div className="flex flex-wrap gap-4 justify-center pt-4">
-              <a href="/book">
+              <Link href="/book">
                 <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-surface-ice font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">
                   Schedule Appointment
                 </Button>
-              </a>
+              </Link>
               <a
                 className="border-2 border-white/40 text-white hover:bg-white/10 font-bold tracking-wide text-sm px-8 py-4 rounded-md flex items-center gap-2 hover:scale-105 active:scale-95 transition-all"
                 href="tel:+18133362927"

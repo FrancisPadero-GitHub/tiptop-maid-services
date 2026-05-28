@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
 import { Header } from "@/components/landing-page/header"
 import { Footer } from "@/components/landing-page/footer"
 import { Button } from "@/components/landing-page/button"
@@ -59,10 +60,10 @@ export default function BookPage() {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <a className="bg-primary-container text-on-primary font-semibold tracking-wide text-sm px-8 py-4 rounded-md hover:bg-secondary transition-all duration-200 shadow-sm inline-flex items-center gap-2 select-none hover:scale-102 active:scale-98" href="#quote-form">
+                <Link className="bg-primary-container text-on-primary font-semibold tracking-wide text-sm px-8 py-4 rounded-md hover:bg-secondary transition-all duration-200 shadow-sm inline-flex items-center gap-2 select-none hover:scale-102 active:scale-98" href="#quote-form">
                   Get A Cleaning Quote
                   <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
-                </a>
+                </Link>
                 <a
                   className="bg-transparent text-primary border-2 border-primary-container font-semibold tracking-wide text-sm px-8 py-4 rounded-md hover:bg-surface-variant transition-all duration-200 inline-flex items-center gap-2 select-none hover:scale-102 active:scale-98"
                   href="tel:+18133362927"

@@ -1,4 +1,7 @@
 import * as React from "react"
+import Link from "next/link"
+import Image from "next/image"
+import tiptopLogo from "@/public/tiptop-transparent-bg.png"
 
 export function Footer() {
   return (
@@ -7,10 +10,10 @@ export function Footer() {
         {/* Brand Column */}
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
-            <img
+            <Image
               alt="Tip Top Maid Services Logo"
               className="h-12 w-auto object-contain"
-              src="/tiptop-transparent-bg.png"  
+              src={tiptopLogo}
             />
           </div>
           <p className="text-xs leading-relaxed text-white/80">
@@ -62,30 +65,30 @@ export function Footer() {
           <h4 className="font-headline mb-2 text-sm font-extrabold tracking-wider text-white uppercase">
             Services
           </h4>
-          <a
+          <Link
             className="text-xs text-white/70 decoration-2 underline-offset-4 transition-colors hover:text-white hover:underline"
-            href="#"
+            href="/services"
           >
             Residential Cleaning
-          </a>
-          <a
+          </Link>
+          <Link
             className="text-xs text-white/70 decoration-2 underline-offset-4 transition-colors hover:text-white hover:underline"
-            href="#"
+            href="/services"
           >
             Commercial Cleaning
-          </a>
-          <a
+          </Link>
+          <Link
             className="text-xs text-white/70 decoration-2 underline-offset-4 transition-colors hover:text-white hover:underline"
-            href="#"
+            href="/services"
           >
             Airbnb Turnaround
-          </a>
-          <a
+          </Link>
+          <Link
             className="text-xs text-white/70 decoration-2 underline-offset-4 transition-colors hover:text-white hover:underline"
-            href="#"
+            href="/services"
           >
             Post Construction
-          </a>
+          </Link>
         </div>
 
         {/* Company Column */}
@@ -93,30 +96,30 @@ export function Footer() {
           <h4 className="font-headline mb-2 text-sm font-extrabold tracking-wider text-white uppercase">
             Company
           </h4>
-          <a
+          <Link
             className="text-xs text-white/70 decoration-2 underline-offset-4 transition-colors hover:text-white hover:underline"
-            href="#"
+            href="/book"
           >
             Contact Us
-          </a>
-          <a
+          </Link>
+          <Link
             className="text-xs text-white/70 decoration-2 underline-offset-4 transition-colors hover:text-white hover:underline"
             href="#"
           >
             Privacy Policy
-          </a>
-          <a
+          </Link>
+          <Link
             className="text-xs text-white/70 decoration-2 underline-offset-4 transition-colors hover:text-white hover:underline"
             href="#"
           >
             Terms of Service
-          </a>
-          <a
+          </Link>
+          <Link
             className="text-xs text-white/70 decoration-2 underline-offset-4 transition-colors hover:text-white hover:underline"
             href="#"
           >
             FAQ
-          </a>
+          </Link>
         </div>
 
         {/* Contact Column */}

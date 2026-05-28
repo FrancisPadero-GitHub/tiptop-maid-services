@@ -1,4 +1,6 @@
 import * as React from "react"
+import Link from "next/link"
+import Image from "next/image"
 import { Header } from "@/components/landing-page/header"
 import { Footer } from "@/components/landing-page/footer"
 import { Button } from "@/components/landing-page/button"
@@ -58,10 +60,12 @@ export default function GalleryPage() {
               >
                 {/* Image Wrap */}
                 <div className="relative h-64 overflow-hidden bg-surface-variant">
-                  <img
+                  <Image
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 select-none"
                     src={item.img}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   {/* Floating After Tag */}
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded shadow-sm">
@@ -112,16 +116,16 @@ export default function GalleryPage() {
               Join hundreds of satisfied homeowners in Tampa who trust us for their residential and commercial cleaning needs.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="/book">
+              <Link href="/book">
                 <button className="w-full sm:w-auto bg-white text-primary hover:bg-surface-ice transition-colors duration-200 font-semibold tracking-wide text-sm px-8 py-4 rounded-md shadow-sm select-none cursor-pointer">
                   Get a Free Quote
                 </button>
-              </a>
-              <a href="/book">
+              </Link>
+              <Link href="/book">
                 <button className="w-full sm:w-auto border border-outline hover:bg-white/10 transition-colors duration-200 text-white font-semibold tracking-wide text-sm px-8 py-4 rounded-md select-none cursor-pointer">
                   Contact Us
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </section>

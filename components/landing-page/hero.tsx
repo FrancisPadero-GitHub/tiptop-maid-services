@@ -1,4 +1,6 @@
 import * as React from "react"
+import Link from "next/link"
+import Image from "next/image"
 import { Button } from "./button"
 
 export function Hero() {
@@ -30,23 +32,27 @@ export function Hero() {
           </p>
 
           <div className="flex w-full flex-col gap-4 pt-4 sm:w-auto sm:flex-row">
-            <Button
-              variant="primary"
-              size="lg"
-              className="flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
-            >
-              Book Your Clean
-              <span className="material-symbols-outlined text-sm">
-                arrow_forward
-              </span>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="transition-all hover:scale-[1.02] active:scale-[0.98]"
-            >
-              Get a Quote
-            </Button>
+            <a href="tel:+18133362927" className="w-full sm:w-auto">
+              <Button
+                variant="primary"
+                size="lg"
+                className="w-full flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              >
+                Book Your Clean
+                <span className="material-symbols-outlined text-sm">
+                  call
+                </span>
+              </Button>
+            </a>
+            <Link href="/book" className="w-full sm:w-auto">
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full transition-all hover:scale-[1.02] active:scale-[0.98]"
+              >
+                Get a Quote
+              </Button>
+            </Link>
           </div>
 
           {/* Social Proof */}
@@ -83,10 +89,12 @@ export function Hero() {
 
         {/* Hero Right Content */}
         <div className="relative z-10 h-[380px] w-full animate-scale-up overflow-hidden rounded-2xl border border-outline-variant/30 shadow-level-2 sm:h-[450px] lg:h-[550px]">
-          <img
+          <Image
             alt="Professional cleaner wiping a wooden table"
             className="h-full w-full object-cover transition-transform duration-700 select-none hover:scale-102"
             src="https://lh3.googleusercontent.com/aida/ADBb0ujEoTvhhOlpTR50tWtk82hOKA5HkcQ9tqAe6f2A_0BZ31tOMRIHKXt-WDLb5KTId2ys-20md1WjlO0O4rdeJQusamLk0elyHfVn0qxhyKE55nsGjU4qxig8ObYVDF6KuUX79U6Py9-I3FOifsR8rG-czTr1DzmXJi8X8ObFAVxCZLBypaMBw_SF2IPO50wZrnSHqpanWRnugazjHfm--OhfhMPQrfPhI5xQ-1a6hN-KLOjD8Aa3ozvbt18"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent mix-blend-multiply"></div>
 

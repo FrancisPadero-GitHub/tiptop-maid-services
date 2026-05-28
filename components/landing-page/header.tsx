@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
+import Image from "next/image"
 import { Button } from "./button"
+import tiptopLogo from "@/public/tiptop-transparent-bg.png"
 
 export function Header() {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -18,25 +21,26 @@ export function Header() {
       <div className="flex justify-between items-center h-20 px-4 md:px-6 max-w-[1200px] mx-auto w-full">
         {/* Logo and Brand */}
         <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-          <a href="/">
-            <img
+          <Link href="/">
+            <Image
               alt="Tip Top Maid Services Logo"
               className="h-14 w-auto object-contain"
-              src="/tiptop-transparent-bg.png"
+              src={tiptopLogo}
+              preload={true}
             />
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               className="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-surface-ice px-3 py-2 rounded-md"
               href={item.href}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -49,7 +53,7 @@ export function Header() {
             <span className="material-symbols-outlined icon-fill">phone_in_talk</span>
             <span className="text-sm font-bold tracking-wide">+1 813-336-2927</span>
           </a>
-          <a href="/book">
+          <a href="tel:+18133362927">
             <Button variant="primary" size="default">
               Book Now
             </Button>
@@ -82,14 +86,14 @@ export function Header() {
         <div className="md:hidden absolute top-20 left-0 w-full bg-surface border-b border-outline-variant shadow-lg py-6 px-4 flex flex-col gap-4 animate-in fade-in slide-in-from-top-5 duration-200">
           <div className="flex flex-col gap-2">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 onClick={() => setIsOpen(false)}
                 className="text-sm font-semibold text-on-surface-variant hover:text-primary hover:bg-surface-ice px-3 py-3 rounded-md transition-colors"
                 href={item.href}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
           <hr className="border-outline-variant" />
@@ -101,7 +105,7 @@ export function Header() {
               <span className="material-symbols-outlined icon-fill">phone_in_talk</span>
               <span className="text-sm font-bold tracking-wide">+1 813-336-2927</span>
             </a>
-            <a href="/book" className="w-full" onClick={() => setIsOpen(false)}>
+            <a href="tel:+18133362927" className="w-full" onClick={() => setIsOpen(false)}>
               <Button variant="primary" size="lg" className="w-full">
                 Book Now
               </Button>

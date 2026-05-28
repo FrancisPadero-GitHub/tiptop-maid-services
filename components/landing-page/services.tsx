@@ -1,4 +1,6 @@
 import * as React from "react"
+import Link from "next/link"
+import Image from "next/image"
 import { Button } from "./button"
 
 export function Services() {
@@ -46,27 +48,29 @@ export function Services() {
               Whether you need regular maintenance or a specialized deep clean, our high-definition cleaning standards apply across all our offerings.
             </p>
           </div>
-          <a href="/services">
+          <Link href="/services">
             <Button variant="outline" size="default" className="whitespace-nowrap shrink-0 hover:scale-105 active:scale-95 transition-transform duration-200">
               View All Services
             </Button>
-          </a>
+          </Link>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {serviceList.map((service, idx) => (
-            <a
+            <Link
               key={idx}
               href={service.link}
               className="group relative bg-surface border border-outline-variant/65 rounded-2xl overflow-hidden shadow-level-1 hover:shadow-level-2 transition-all duration-300 flex flex-col h-full cursor-pointer hover:-translate-y-1"
             >
               {/* Image Header Block */}
               <div className="h-44 w-full relative overflow-hidden">
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 select-none"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-80 z-10"></div>
               </div>
@@ -92,7 +96,7 @@ export function Services() {
                   <span className="material-symbols-outlined text-sm font-bold">arrow_forward</span>
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
