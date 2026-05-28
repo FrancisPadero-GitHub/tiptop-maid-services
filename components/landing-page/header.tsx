@@ -17,10 +17,10 @@ export function Header() {
   ]
 
   return (
-    <nav className="bg-surface/85 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-outline-variant w-full">
-      <div className="flex justify-between items-center h-20 px-4 md:px-6 max-w-[1200px] mx-auto w-full">
+    <nav className="sticky top-0 z-50 w-full border-b border-outline-variant bg-white shadow-sm">
+      <div className="mx-auto flex h-20 w-full max-w-[1200px] items-center justify-between px-4 md:px-6">
         {/* Logo and Brand */}
-        <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+        <div className="flex flex-shrink-0 cursor-pointer items-center gap-2">
           <Link href="/">
             <Image
               alt="Tip Top Maid Services Logo"
@@ -32,11 +32,11 @@ export function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden items-center space-x-6 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.label}
-              className="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-surface-ice px-3 py-2 rounded-md"
+              className="rounded-md px-3 py-2 text-sm font-semibold text-on-surface-variant transition-colors duration-200 hover:bg-surface-ice hover:text-primary"
               href={item.href}
             >
               {item.label}
@@ -45,33 +45,39 @@ export function Header() {
         </div>
 
         {/* Action Elements */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden items-center gap-4 md:flex">
           <a
-            className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+            className="flex items-center gap-2 text-primary transition-colors hover:text-secondary"
             href="tel:+18133362927"
           >
-            <span className="material-symbols-outlined icon-fill">phone_in_talk</span>
-            <span className="text-sm font-bold tracking-wide">+1 813-336-2927</span>
+            <span className="material-symbols-outlined icon-fill">
+              phone_in_talk
+            </span>
+            <span className="text-sm font-bold tracking-wide">
+              +1 813-336-2927
+            </span>
           </a>
-          <a href="tel:+18133362927">
+          <Link href="/book">
             <Button variant="primary" size="default">
               Book Now
             </Button>
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
-        <div className="flex md:hidden items-center gap-3">
+        <div className="flex items-center gap-3 md:hidden">
           <a
-            className="text-primary hover:text-secondary p-1"
+            className="p-1 text-primary hover:text-secondary"
             href="tel:+18133362927"
             aria-label="Call Tip Top Maid Services"
           >
-            <span className="material-symbols-outlined icon-fill">phone_in_talk</span>
+            <span className="material-symbols-outlined icon-fill">
+              phone_in_talk
+            </span>
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-on-surface-variant p-2 hover:bg-surface-ice rounded-md"
+            className="rounded-md p-2 text-on-surface-variant hover:bg-surface-ice"
             aria-label="Toggle menu"
           >
             <span className="material-symbols-outlined">
@@ -83,13 +89,13 @@ export function Header() {
 
       {/* Mobile Drawer Overlay */}
       {isOpen && (
-        <div className="md:hidden absolute top-20 left-0 w-full bg-surface border-b border-outline-variant shadow-lg py-6 px-4 flex flex-col gap-4 animate-in fade-in slide-in-from-top-5 duration-200">
+        <div className="animate-in fade-in slide-in-from-top-5 absolute top-20 left-0 z-50 flex w-full flex-col gap-4 border-b border-outline-variant bg-white px-4 py-6 shadow-lg duration-200 md:hidden">
           <div className="flex flex-col gap-2">
             {navItems.map((item) => (
               <Link
                 key={item.label}
                 onClick={() => setIsOpen(false)}
-                className="text-sm font-semibold text-on-surface-variant hover:text-primary hover:bg-surface-ice px-3 py-3 rounded-md transition-colors"
+                className="rounded-md px-3 py-3 text-sm font-semibold text-on-surface-variant transition-colors hover:bg-surface-ice hover:text-primary"
                 href={item.href}
               >
                 {item.label}
@@ -99,17 +105,21 @@ export function Header() {
           <hr className="border-outline-variant" />
           <div className="flex flex-col gap-4">
             <a
-              className="flex items-center justify-center gap-2 text-primary hover:text-secondary py-2"
+              className="flex items-center justify-center gap-2 py-2 text-primary hover:text-secondary"
               href="tel:+18133362927"
             >
-              <span className="material-symbols-outlined icon-fill">phone_in_talk</span>
-              <span className="text-sm font-bold tracking-wide">+1 813-336-2927</span>
+              <span className="material-symbols-outlined icon-fill">
+                phone_in_talk
+              </span>
+              <span className="text-sm font-bold tracking-wide">
+                +1 813-336-2927
+              </span>
             </a>
-            <a href="tel:+18133362927" className="w-full" onClick={() => setIsOpen(false)}>
+            <Link href="/book" className="w-full" onClick={() => setIsOpen(false)}>
               <Button variant="primary" size="lg" className="w-full">
                 Book Now
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       )}

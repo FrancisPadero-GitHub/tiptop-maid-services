@@ -5,7 +5,7 @@ import { Button } from "./button"
 
 export function Hero() {
   return (
-    <section className="bg-surface relative overflow-hidden py-10 md:py-10">
+    <section className="relative overflow-hidden bg-surface py-10 md:py-10">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
         {/* Hero Left Content */}
         <div className="z-10 flex animate-fade-in-up flex-col justify-center space-y-6">
@@ -36,12 +36,10 @@ export function Hero() {
               <Button
                 variant="primary"
                 size="lg"
-                className="w-full flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="flex w-full items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 Book Your Clean
-                <span className="material-symbols-outlined text-sm">
-                  call
-                </span>
+                <span className="material-symbols-outlined text-sm">call</span>
               </Button>
             </a>
             <Link href="/book" className="w-full sm:w-auto">
@@ -58,13 +56,13 @@ export function Hero() {
           {/* Social Proof */}
           <div className="mt-8 flex w-full max-w-md items-center gap-4 border-t border-outline-variant pt-8">
             <div className="flex -space-x-3">
-              <div className="bg-tertiary-fixed border-surface flex h-10 w-10 items-center justify-center rounded-full border-2 text-xs font-extrabold text-primary transition-transform hover:-translate-y-1">
+              <div className="bg-tertiary-fixed flex h-10 w-10 items-center justify-center rounded-full border-2 border-surface text-xs font-extrabold text-primary transition-transform hover:-translate-y-1">
                 JD
               </div>
-              <div className="bg-secondary-fixed border-surface flex h-10 w-10 items-center justify-center rounded-full border-2 text-xs font-extrabold text-primary transition-transform hover:-translate-y-1">
+              <div className="bg-secondary-fixed flex h-10 w-10 items-center justify-center rounded-full border-2 border-surface text-xs font-extrabold text-primary transition-transform hover:-translate-y-1">
                 SM
               </div>
-              <div className="bg-primary-fixed border-surface flex h-10 w-10 items-center justify-center rounded-full border-2 text-xs font-extrabold text-primary transition-transform hover:-translate-y-1">
+              <div className="bg-primary-fixed flex h-10 w-10 items-center justify-center rounded-full border-2 border-surface text-xs font-extrabold text-primary transition-transform hover:-translate-y-1">
                 AL
               </div>
             </div>
@@ -99,7 +97,7 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent mix-blend-multiply"></div>
 
           {/* Glassmorphic floating card with float animation */}
-          <div className="bg-surface/85 absolute right-6 bottom-6 left-6 flex animate-float items-center justify-between rounded-xl border border-outline-variant/50 p-4 shadow-level-1 backdrop-blur-md">
+          <div className="absolute right-6 bottom-6 left-6 flex animate-float items-center justify-between rounded-xl border border-outline-variant/50 bg-surface/85 p-4 shadow-level-1 backdrop-blur-md">
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-surface-ice text-secondary">
                 <span className="material-symbols-outlined icon-fill">

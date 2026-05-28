@@ -17,5 +17,15 @@
   "css.lint.unknownAtRules": "ignore",
   "editor.formatOnSave": true,
   "workbench.colorTheme": "Monokai",
-  "terminal.integrated.commandsToSkipShell": ["workbench.mcp.startServer"]
+  "terminal.integrated.commandsToSkipShell": [
+    "workbench.mcp.startServer"
+  ],
+  "chat.mcp.serverSampling": {
+    "tiptop-maid-services/.vscode/mcp.json: shadcn": {
+      "allowedModels": [
+        "copilot/auto",
+        "copilotcli/claude-haiku-4.5"
+      ]
+    }
+  }
 }

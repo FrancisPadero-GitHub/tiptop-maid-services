@@ -4,28 +4,29 @@ import { Button } from "./button"
 
 export function CtaBanner() {
   return (
-    <section className="bg-primary text-on-primary py-16 md:py-20">
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
+    <section className="bg-primary py-16 text-on-primary md:py-20">
+      <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-8 px-4 md:px-6 lg:flex-row">
         {/* Info Block */}
-        <div className="max-w-2xl text-center lg:text-left space-y-4">
-          <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-white">
+        <div className="max-w-2xl space-y-4 text-center lg:text-left">
+          <h2 className="font-headline text-3xl font-extrabold text-white md:text-4xl">
             Ready for a Tip Top Clean?
           </h2>
-          <p className="text-sm md:text-base text-inverse-primary leading-relaxed opacity-90">
-            Keep cleaning simple, affordable, and convenient. Schedule your appointment today with our fully insured and trusted professionals.
+          <p className="text-inverse-primary text-sm leading-relaxed opacity-90 md:text-base">
+            Keep cleaning simple, affordable, and convenient. Schedule your
+            appointment today with our fully insured and trusted professionals.
           </p>
         </div>
 
         {/* Buttons Stack */}
-        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto shrink-0 justify-center">
+        <div className="flex w-full shrink-0 flex-col justify-center gap-4 sm:w-auto sm:flex-row">
           <Link href="/book" className="w-full sm:w-auto">
-            <button className="w-full bg-white text-primary hover:bg-surface-ice transition-colors duration-200 font-semibold tracking-wide text-sm px-8 py-4 rounded-md shadow-sm select-none cursor-pointer">
+            <button className="w-full cursor-pointer rounded-md bg-white px-8 py-4 text-sm font-semibold tracking-wide text-primary shadow-sm transition-colors duration-200 select-none hover:bg-surface-ice">
               Book Now Online
             </button>
           </Link>
-          
+
           <a
-            className="border border-outline hover:bg-white/10 transition-colors duration-200 text-white font-semibold tracking-wide text-sm px-8 py-4 rounded-md flex items-center justify-center gap-2 select-none"
+            className="flex items-center justify-center gap-2 rounded-md border border-outline px-8 py-4 text-sm font-semibold tracking-wide text-white transition-colors duration-200 select-none hover:bg-white/10"
             href="tel:+18133362927"
           >
             <span className="material-symbols-outlined text-base">call</span>

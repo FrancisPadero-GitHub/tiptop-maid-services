@@ -17,7 +17,8 @@ const inter = Inter({
 
 export const metadata = {
   title: "Tip Top Maid Services | Professional Cleaning in Tampa",
-  description: "Experience the transformative power of a deep clean. Our trusted professionals deliver premium cleaning tailored to your lifestyle, leaving you with a spotless, refreshing space.",
+  description:
+    "Experience the transformative power of a deep clean. Our trusted professionals deliver premium cleaning tailored to your lifestyle, leaving you with a spotless, refreshing space.",
 }
 
 export default function RootLayout({
