@@ -3,59 +3,78 @@ import { Button } from "./button"
 
 export function Hero() {
   return (
-    <section className="relative bg-surface overflow-hidden py-16 md:py-24">
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="bg-surface relative overflow-hidden py-10 md:py-10">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
         {/* Hero Left Content */}
-        <div className="z-10 flex flex-col justify-center space-y-6 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-surface-ice border border-primary/20 rounded-full px-4 py-1.5 text-primary w-fit hover:scale-102 transition-transform duration-200">
-            <span className="material-symbols-outlined text-sparkle-blue animate-pulse" style={{ fontSize: "18px" }}>
+        <div className="z-10 flex animate-fade-in-up flex-col justify-center space-y-6">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-surface-ice px-4 py-1.5 text-primary transition-transform duration-200 hover:scale-102">
+            <span
+              className="material-symbols-outlined animate-pulse text-sparkle-blue"
+              style={{ fontSize: "18px" }}
+            >
               auto_awesome
             </span>
-            <span className="text-xs font-semibold uppercase tracking-wider">
+            <span className="text-xs font-semibold tracking-wider uppercase">
               Serving Tampa & Surrounding Areas
             </span>
           </div>
-          
-          <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-tight">
+
+          <h1 className="font-headline text-4xl leading-tight font-extrabold text-primary md:text-5xl lg:text-6xl">
             Professional Home & Office Cleaning in Tampa
           </h1>
-          
-          <p className="text-base md:text-lg text-on-surface-variant max-w-lg leading-relaxed">
-            Experience the transformative power of a deep clean. Our trusted professionals deliver premium cleaning tailored to your lifestyle, leaving you with a spotless, refreshing space.
+
+          <p className="max-w-lg text-base leading-relaxed text-on-surface-variant md:text-lg">
+            Experience the transformative power of a deep clean. Our trusted
+            professionals deliver premium cleaning tailored to your lifestyle,
+            leaving you with a spotless, refreshing space.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
-            <Button variant="primary" size="lg" className="flex justify-center items-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all">
+
+          <div className="flex w-full flex-col gap-4 pt-4 sm:w-auto sm:flex-row">
+            <Button
+              variant="primary"
+              size="lg"
+              className="flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
               Book Your Clean
-              <span className="material-symbols-outlined text-sm">arrow_forward</span>
+              <span className="material-symbols-outlined text-sm">
+                arrow_forward
+              </span>
             </Button>
-            <Button variant="outline" size="lg" className="hover:scale-[1.02] active:scale-[0.98] transition-all">
+            <Button
+              variant="outline"
+              size="lg"
+              className="transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
               Get a Quote
             </Button>
           </div>
-          
+
           {/* Social Proof */}
-          <div className="flex items-center gap-4 mt-8 pt-8 border-t border-outline-variant w-full max-w-md">
+          <div className="mt-8 flex w-full max-w-md items-center gap-4 border-t border-outline-variant pt-8">
             <div className="flex -space-x-3">
-              <div className="w-10 h-10 rounded-full bg-tertiary-fixed border-2 border-surface flex items-center justify-center text-primary font-extrabold text-xs hover:-translate-y-1 transition-transform">
+              <div className="bg-tertiary-fixed border-surface flex h-10 w-10 items-center justify-center rounded-full border-2 text-xs font-extrabold text-primary transition-transform hover:-translate-y-1">
                 JD
               </div>
-              <div className="w-10 h-10 rounded-full bg-secondary-fixed border-2 border-surface flex items-center justify-center text-primary font-extrabold text-xs hover:-translate-y-1 transition-transform">
+              <div className="bg-secondary-fixed border-surface flex h-10 w-10 items-center justify-center rounded-full border-2 text-xs font-extrabold text-primary transition-transform hover:-translate-y-1">
                 SM
               </div>
-              <div className="w-10 h-10 rounded-full bg-primary-fixed border-2 border-surface flex items-center justify-center text-primary font-extrabold text-xs hover:-translate-y-1 transition-transform">
+              <div className="bg-primary-fixed border-surface flex h-10 w-10 items-center justify-center rounded-full border-2 text-xs font-extrabold text-primary transition-transform hover:-translate-y-1">
                 AL
               </div>
             </div>
             <div className="flex flex-col">
               <div className="flex text-amber-400">
                 {[1, 2, 3, 4, 5].map((s) => (
-                  <span key={s} className="material-symbols-outlined icon-fill" style={{ fontSize: "16px" }}>
+                  <span
+                    key={s}
+                    className="material-symbols-outlined icon-fill"
+                    style={{ fontSize: "16px" }}
+                  >
                     star
                   </span>
                 ))}
               </div>
-              <span className="text-xs font-medium text-on-surface-variant mt-0.5">
+              <span className="mt-0.5 text-xs font-medium text-on-surface-variant">
                 Over 450 Satisfied Customers
               </span>
             </div>
@@ -63,31 +82,35 @@ export function Hero() {
         </div>
 
         {/* Hero Right Content */}
-        <div className="relative z-10 w-full h-[380px] sm:h-[450px] lg:h-[550px] rounded-2xl overflow-hidden shadow-level-2 border border-outline-variant/30 animate-scale-up">
+        <div className="relative z-10 h-[380px] w-full animate-scale-up overflow-hidden rounded-2xl border border-outline-variant/30 shadow-level-2 sm:h-[450px] lg:h-[550px]">
           <img
             alt="Professional cleaner wiping a wooden table"
-            className="w-full h-full object-cover select-none hover:scale-102 transition-transform duration-700"
+            className="h-full w-full object-cover transition-transform duration-700 select-none hover:scale-102"
             src="https://lh3.googleusercontent.com/aida/ADBb0ujEoTvhhOlpTR50tWtk82hOKA5HkcQ9tqAe6f2A_0BZ31tOMRIHKXt-WDLb5KTId2ys-20md1WjlO0O4rdeJQusamLk0elyHfVn0qxhyKE55nsGjU4qxig8ObYVDF6KuUX79U6Py9-I3FOifsR8rG-czTr1DzmXJi8X8ObFAVxCZLBypaMBw_SF2IPO50wZrnSHqpanWRnugazjHfm--OhfhMPQrfPhI5xQ-1a6hN-KLOjD8Aa3ozvbt18"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent mix-blend-multiply"></div>
-          
+
           {/* Glassmorphic floating card with float animation */}
-          <div className="absolute bottom-6 left-6 right-6 bg-surface/85 backdrop-blur-md border border-outline-variant/50 p-4 rounded-xl shadow-level-1 flex items-center justify-between animate-float">
+          <div className="bg-surface/85 absolute right-6 bottom-6 left-6 flex animate-float items-center justify-between rounded-xl border border-outline-variant/50 p-4 shadow-level-1 backdrop-blur-md">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-surface-ice flex items-center justify-center text-secondary">
-                <span className="material-symbols-outlined icon-fill">verified</span>
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-surface-ice text-secondary">
+                <span className="material-symbols-outlined icon-fill">
+                  verified
+                </span>
               </div>
               <div>
                 <p className="text-sm font-bold text-primary">Fully Insured</p>
-                <p className="text-xs text-on-surface-variant mt-0.5">Peace of mind guaranteed</p>
+                <p className="mt-0.5 text-xs text-on-surface-variant">
+                  Peace of mind guaranteed
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       {/* Dynamic decorative backdrop bubble */}
-      <div className="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 bg-surface-ice rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+      <div className="pointer-events-none absolute top-0 right-0 -mt-32 -mr-32 h-96 w-96 rounded-full bg-surface-ice opacity-60 blur-3xl"></div>
     </section>
   )
 }
